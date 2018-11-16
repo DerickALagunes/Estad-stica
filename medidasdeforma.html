@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Medidas de Forma</title>
+        <meta name="description" content="Medidas de forma, estadística, probabilidad, coeficiente de asimetria, curtosis, simetria">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" id="color-scheme" href="css/colors/green.css">
+        <!-- Favicon and Apple Icons -->
+        <link rel="icon" type="image/png" href="images/icons/favicon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/icons/faviconx57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/icons/faviconx72.png">
+        <!-- Modernizr -->
+        <script src="js/modernizr.js"></script>
+        <!--- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Queryloader -->
+        <script src="js/queryloader2.min.js"></script>
+    </head>
+    <body>
+    <div class="boss-loader-overlay"></div><!-- End .boss-loader-overlay -->
+    <div id="wrapper">
+        <header id="header" role="banner">            
+            <nav class="navbar navbar-white animated-dropdown ttb-dropdown" role="navigation">
+                
+                <div class="navbar-inner sticky-menu">
+                    <div class="container">
+                        <div class="navbar-header">
+
+                            <button type="button" class="navbar-toggle btn-circle pull-right collapsed" data-toggle="collapse" data-target="#main-navbar-container">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <a class="navbar-brand text-uppercase" href="index.html" title="Probabilidad y Estadística">Estadística</a>
+                                                        
+                        </div><!-- End .navbar-header -->
+
+                        <div class="collapse navbar-collapse" id="main-navbar-container">
+                            <ul class="nav navbar-nav">
+                                <li class="megamenu-container">
+                                    <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Inicio</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Temas<span class="angle"></span></a>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Medidas de Tendencia Central</a></li>
+                                        <li><a href="#">Medidas de Forma</a></li>
+                                        <li><a href="#">Forma Normal</a></li>
+                                        <li><a href="#">Forma Binomial</a></li>
+                                        <li><a href="#">Chi Cuadrada</a></li>
+                                        <li><a href="#">Medidas de Correlación</a></li>
+                                    </ul>
+                                </li>                                
+                            </ul>                                                                              
+                            
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container -->
+                </div><!-- End .navbar-inner -->
+            </nav>
+        </header><!-- End #header -->
+    
+        <!--Cuadro verde -->
+        <div id="content" role="main">
+            <div class="page-header parallax dark larger2x larger-desc" data-bgattach="images/page-header.jpg" data-0="background-position:50% 0px;" data-500="background-position:50% -100%">
+                <div class="container" data-0="opacity:1;" data-top="opacity:0;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1>Medidas de Forma</h1>
+                            <p class="page-header-desc">En esta pagina se explica:
+                                <ul>
+                                    <li>-El concepto de medidas de forma</li>
+                                    <li>-Calculo de asimetria</li>
+                                    <li>-Calculo de curtosis</li>
+                                    <li>-Relación con las medidas de tendencia central</li>
+                                </ul>
+                            </p>
+                        </div><!-- End .col-md-6 -->
+                        <div class="col-md-6">
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active">Medidas de Forma</li>
+                            </ol>
+                        </div><!-- End .col-md-6 -->
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+            </div><!-- End .page-header -->
+
+            <div class="mb10"></div><!-- space -->
+
+            <!-- Concepto -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="mb20 visible-md visible-lg"></div>
+                        <iframe class="center-block wow fadeInUp" width="485" height="315" src="https://www.youtube.com//embed/WfhyfPkB3EA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    </div><!-- End .col-md-5 -->
+                    <div class="col-md-7">
+                        <h2 class="title-border title-bg-line gray mb40"><span>Las Medidas de Forma</span></h2>
+                        <p align="justify">
+                        Son aquellos números que indican la morfología de la distribución de los datos, es decir de la simetría y apuntamiento que tiene el histograma de la variable en estudio.
+                        </p>                        
+                        <p>
+                            Las medidas de forma son:
+                            <ul>
+                                <li><p align="justify">-<strong>Sesgo o Coeficiente de simetria</strong></p></li>
+                                <li><p align="justify">-<strong>Curtosis</strong></p></li>
+                            </ul>
+                        </p>
+                        <p>
+                            A continuación se explicará cada medida de forma.
+                        </p>
+                    </div><!-- End .col-md-7 -->
+                </div><!-- End .row -->
+            </div><!-- End .container -->
+            <hr>
+            <div class="mb80 mb40-sm"></div><!-- space -->
+
+            <!-- ASIMETRIA -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="mb20 visible-md visible-lg"></div>
+                        <iframe class="center-block wow fadeInUp" width="485" height="315" src="https://www.youtube.com//embed/WfhyfPkB3EA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    </div><!-- End .col-md-5 -->
+                    <div class="col-md-7">
+                        <h2 class="title-border title-bg-line gray mb40"><span>Calculo del Coeficiente de Asimetria</span></h2>
+                        <p align="justify">
+                        Es el grado de asimetría o sesgo que presenta una figura obtenida de los datos de una distribución con respecto a la media (Qué tanto se mueve a la izquierda o derecha perdiendo su simetria).
+                        </p>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb30"></div><!-- space -->
+                            <div class="owl-carousel aboutus-slider">
+                                <img src="images/asimetria1.png" title="Coeficiente=0" alt="Coeficiente=0">
+                                <img src="images/asimetria2.png" title="Coeficiente>0" alt="Coeficiente>0">
+                                <img src="images/asimetria3.png" title="Coeficiente<0" alt="Coeficiente<0">
+                            </div><!-- End .owl-carousel -->
+                        </div><!-- End .col-md-6 -->
+
+                        <p>
+                            <ul>
+                                <li><p align="justify">-Cuando la distribución es normal, el valor del sesgo es 0 y la forma que toma la figura es <strong>simetrica</strong> con respecto a la media.</p></li>
+                                <li><p align="justify">-Cuando los datos en la figura se cargan a la izquierda el sesgo es <strong>positivo</strong> y su valor de asimetria es <strong>mayor</strong> a 0.</p></li>
+                                <li><p align="justify">-De forma contraria, cuando los datos en la figura se cargan a la derecha el sesgo es <strong>negativo</strong> y su valor de asimetria es <strong>menor</strong> a 0.</p></li> 
+                            </ul>
+                        </p>
+                    </div><!-- End .col-md-7 -->
+                </div><!-- End .row -->
+            </div><!-- End .container -->
+            <hr>
+            <div class="mb80 mb40-sm"></div><!-- space -->
+
+            <!-- CURTOSIS -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="mb20 visible-md visible-lg"></div>
+                        <iframe class="center-block wow fadeInUp" width="485" height="315" src="https://www.youtube.com//embed/WfhyfPkB3EA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    </div><!-- End .col-md-5 -->
+                    <div class="col-md-7">
+                        <h2 class="title-border title-bg-line gray mb40"><span>Calculo de Curtosis</span></h2>
+                        <p align="justify">
+                        La curtosis da una noción sobre el grado de apuntamiento de la curva de datos, es decir, la concentración de los datos en la región central de la distribución <strong>normal</strong> de datos.
+                        </p>
+                        <div class="col-md-6 col-sm-6">
+                            <img class="img-responsive" src="images/curtosis.png" alt="Curtosis" />
+                        </div>
+                        <p>
+                            <ul>
+                                <li><p align="justify">-Si los datos están muy concentrados hacia la media, el valor de la curtosis es <strong>mayor</strong> a 0, la distribución se llama leptocúrtica.</p></li>
+                                <li><p align="justify">-Si los datos están muy dispersos, el valor de la curtosis es <strong>menor</strong> a 0, la distribución se llama platicúrtica.</p></li>
+                                <li><p align="justify">-Cuando la distribución es normal, el valor de curtosis es 0 y se llama distribución mesocúrtica.</p></li>
+                            </ul>
+                        </p>
+                    </div><!-- End .col-md-7 -->
+                </div><!-- End .row -->
+            </div><!-- End .container -->
+            <hr>
+            <div class="mb80 mb40-sm"></div><!-- space -->
+
+            <!-- Relación -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="mb20 visible-md visible-lg"></div>
+                        <iframe class="center-block wow fadeInUp" width="485" height="315" src="https://www.youtube.com//embed/WfhyfPkB3EA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    </div><!-- End .col-md-5 -->
+                    <div class="col-md-7">
+                        <h2 class="title-border title-bg-line gray mb40"><span>Relación con la medidas de tendencia central</span></h2>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb30"></div><!-- space -->
+                            <div class="owl-carousel aboutus-slider">
+                                <img src="images/relacion1.png" title="media=mediana=moda" alt="r1">
+                                <img src="images/relacion2.png" title="moda<mediana<media" alt="r2">
+                                <img src="images/relacion3.png" title="moda>mediana>media" alt="r3">
+                            </div><!-- End .owl-carousel -->
+                        </div><!-- End .col-md-6 -->
+                        <p align="justify">Dependiendo del sesgo o asimetria de la figura de un conjunto de datos se observan patrones en el orden y los valores de la media, moda y mediana (La moda es el dato que siempre está en la punta de la curva).</p>
+                        <p>
+                            <ul>
+                                <li><strong>-La forma es simetrica: </strong></li>
+                                <p align="justify">La media, la mediana y la moda tendran exactamente el mismo valor y se encontraran exactamente en el centro del grafico.</p>
+                                <li><strong>-La forma esta sesgada a la derecha: </strong></li>
+                                <p align="justify">La moda es mayor a la mediana, y esta a su vez mayor que la media.</p>
+                                <li><strong>-La forma esta sesgada a la izquierda: </strong></li>
+                                <p align="justify">La moda es menor a la mediana, y esta a su vez menor que la media.</p>
+                            </ul>
+                        </p>                       
+                        
+                    </div><!-- End .col-md-7 -->
+                </div><!-- End .row -->
+            </div><!-- End .container -->
+            <div class="mb80 mb40-sm"></div><!-- space -->
+
+        </div><!-- End #content -->
+
+        <footer id="footer" class="footer-inverse" role="contentinfo">
+            <div id="footer-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="widget">
+                                <div class="corporate-widget">
+                                    <span class="footer-logo">ESTADÍSTICA</span><!-- End .footer-logo -->
+                                    <p>Tomar decisiones en base a la información que podemos obtener.</p>
+
+                                    <address>
+                                        Realizado por: Derick Axel Lagunes Ramírez.<br> 
+                                        Institución: <a href="https://www.cenidet.edu.mx">Cenidet</a><br>
+                                        Email: <a href="mailto:derick.lagunez18ca@cenidet.edu.mx">derick.lagunez18ca@cenidet.edu.mx</a><br>                                        
+                                    </address>                                    
+                                    
+                                </div><!-- End corporate-widget -->
+                            </div><!-- End .widget -->
+                        </div><!-- End .col-md-3 -->
+                        <div class="col-md-6 col-sm-6">
+                            <div class="widget">
+                                <h4>Más temas:</h4>
+                                <ul class="links">
+                                    <li><a href=""><i class="fa fa-angle-right"></i>Medidas de Tendencia Central</a></li>
+                                    <li><a href=""><i class="fa fa-angle-right"></i>Chi Cuadrada</a></li>
+                                    <li><a href=""><i class="fa fa-angle-right"></i>Distribución Normal</a></li>
+                                    <li><a href=""><i class="fa fa-angle-right"></i>Distribución Binomial</a></li>
+                                    <li><a href=""><i class="fa fa-angle-right"></i>Análisi de Regresión y Correlación</a></li>
+                                </ul>
+                            </div><!-- End .widget -->                            
+                        </div><!-- End .col-md-3 -->
+
+                        <div class="clearfix visible-sm"></div><!-- End .clearfix -->
+
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+            </div><!-- End #footer-inner -->
+            <div id="footer-bottom" class="no-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12" style="background: white;">
+                            <img style="display: block; margin-left: auto; margin-right: auto;" src="images/cenidet.png" height="100" alt="cenidet">
+                        </div><!-- End .col-md-6 -->
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+            </div><!-- End #footer-bottom -->
+        </footer><!-- End #footer -->
+
+    </div><!-- End #wrapper -->
+    <a href="#top" id="scroll-top" title="Back to Top"><i class="fa fa-angle-up"></i></a>
+	<!-- END -->
+
+    <!-- Smoothscroll -->
+    <script src="js/smoothscroll.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.hoverIntent.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/waypoints-sticky.min.js"></script>
+    <script src="js/jquery.debouncedresize.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jflickrfeed.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/twitter/jquery.tweet.min.js"></script>
+    <script src="js/skrollr.min.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/main.js"></script>
+	
+    </body>
+</html>
